@@ -13,7 +13,7 @@ function MainNavigation() {
             <Link href='/'>All Travels</Link>
           </li>
           <li>
-            <Link href='/new-trip'>Add New Travel</Link>
+            <Link href='/new-travel'>Add New Travel</Link>
           </li>
         </ul>
       </nav>

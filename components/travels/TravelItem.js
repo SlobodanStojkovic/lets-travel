@@ -1,14 +1,14 @@
-import { useRouter } from 'next/router';
+import { useRouter } from "next/router";
 
-import Card from '../ui/Card';
-import classes from './TravelItem.module.css';
+import Card from "../ui/Card";
+import classes from "./TravelItem.module.css";
 
-function TravelItem(props) {
+const TravelItem = (props) => {
   const router = useRouter();
 
-  function showDetailsHandler() {
-    router.push('/' + props.id);
-  }
+  const showDetailsHandler = () => {
+    router.push("/" + props.id);
+  };
 
   return (
     <li className={classes.item}>
@@ -18,7 +18,7 @@ function TravelItem(props) {
         </div>
         <div className={classes.content}>
           <h3>{props.title}</h3>
-          <address>{props.address}</address>
+          <address>{props.country}</address>
         </div>
         <div className={classes.actions}>
           <button onClick={showDetailsHandler}>Show Details</button>
@@ -26,6 +26,6 @@ function TravelItem(props) {
       </Card>
     </li>
   );
-}
+};
 
 export default TravelItem;
